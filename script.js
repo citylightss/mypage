@@ -33,3 +33,13 @@ $(".gallery-list").magnificPopup({
 		enabled: true,
 	},
 });
+
+$('a[href^="#"]').click(function () {
+	let navigation = $(this).attr("href");
+	$("html, body").animate(
+		{
+			scrollTop: $(navigation).offset().top,
+		},
+		600
+	);
+});
